@@ -99,12 +99,12 @@ function validateEmail(email) {
 // statistics section
 const container = document.getElementById("stats-row");
 let valDisplays = document.querySelectorAll(".stats-count-up");
-let interval = 2000;
+let interval = 500;
 
 ScrollTrigger.create({
   trigger: container,
   start: `top+=25px bottom`,
-  markers: true,
+  // markers: true,
   onEnter: countUp,
   onEnterBack: countUp
 });
