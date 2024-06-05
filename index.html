@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WeAddo</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/2638380501.js" crossorigin="anonymous"></script>
+
+  <!-- slick carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+  <!-- external css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- #0 -->
+  <!-- navigation bar -->
+
+  <header class="container">
+    <nav class="navbar navbar-light fixed-top">
+      <div class="nav-left">
+        <a class="navbar-brand" href=""><img class="logo" src="media/logo.png" alt=""></a>
+      </div>
+      <div class="nav-right">
+        <input placeholder="Your Industry..." type="search" name="search" id="search" class="search-input">
+        <button class="btn btn-dark btn-sm nav-btn btn-connect btn-connect-laptop" data-toggle="modal" data-target="#coffeeModal" type="button" name="button"><i>Coffee? We'll pay!</i></button>
+        <button class="btn btn-outline-dark btn-lg nav-btn btn-menu" data-toggle="modal" data-target="#navModal" type="button" name="button" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+      </div>
+
+    </nav>
+  </header>
+<button class="btn btn-dark btn-sm nav-btn btn-connect btn-connect-mobile" data-toggle="modal" data-target="#coffeeModal" type="button" name="button"><i>Coffee? We'll pay!</i></button>
+
+  <div class="modal fade modal-fullscreen" id="coffeeModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="row">
+          <div class="modal-heading col-lg-5">
+            <h2 class="modal-title" id="coffeeModalLabel">Embark on a Journey of Innovation with </h2>
+            <img class="logo" src="media/logo.png" alt="">
+          </div>
+          <div class="modal-body col-lg-7">
+            <form id="coffeeForm">
+              <div class="form-inputs row">
+                <div class="form-group col-sm-6">
+                  <input type="text" class="form-control" id="n-fname" aria-describedby="fname" placeholder="First Name*" onkeypress="return nameValidater(event)">
+                  <span id="fname-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input type="text" class="form-control" id="n-lname" aria-describedby="lname" placeholder="Last Name*" onkeypress="return nameValidater(event)">
+                  <span id="lname-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input type="text" class="form-control" id="n-email1" aria-describedby="emailHelp" placeholder="Work Email*">
+                  <span id="email-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input type="text" class="form-control" id="n-job" placeholder="Job Title*">
+                  <span id="job-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input type="text" class="form-control" id="n-company" placeholder="Company*">
+                  <span id="company-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                  <select name="loaction" id="n-location" class="form-control">
+                    <option class="form-option" value="">Location*</option>
+                    <option class="form-option" value="ncr">Delhi NCR</option>
+                    <option class="form-option" value="mumbai">Mumbai</option>
+                    <option class="form-option" value="bangalore">Bangalore</option>
+                    <option class="form-option" value="rajasthan">Rajasthan</option>
+                    <option class="form-option" value="haryana">Haryana</option>
+                    <option class="form-option" value="other">Others</option>
+                  </select>
+                  <span id="location-error" class="error-message"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea  class="form-control" id="n-message" placeholder="Message" cols="50" rows="3"></textarea>
+              </div>
+
+              <div class="modal-footer border-top-0">
+                <button type="submit" class="btn btn-green coffee-form-btn">START YOUR JOURNEY</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="navModal" tabindex="-1" role="dialog" aria-labelledby="navModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark" style="color: white"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid row">
+          <div class="col-lg-10 row">
+            <div class="col-md-3">
+              <h3>About</h3>
+              <ul class="nav-list">
+                <li><a class="nav-link" href="#">Who we are?</a> </li>
+                <li><a class="nav-link" href="#">Leadership Team</a> </li>
+                <li><a class="nav-link" href="#">Work with us</a> </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Solutions</h3>
+              <ul class="nav-list">
+                <li><a class="nav-link" href="#">CX Transformation</a> </li>
+                <li><a class="nav-link" href="#">Demand & Engagement</a> </li>
+                <li><a class="nav-link" href="#">AI & Analytics</a> </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Industries</h3>
+              <ul class="nav-list">
+                <li><a class="nav-link" href="#">Omni Channel Retail</a> </li>
+                <li><a class="nav-link" href="#">D2C Ecommerce</a> </li>
+                <li><a class="nav-link" href="#">Healthcare</a> </li>
+                <li><a class="nav-link" href="#">Education</a> </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Community</h3>
+              <h3>Case Study</h3>
+              <h3>Insights</h3>
+              <h3>Career</h3>
+            </div>
+          </div>
+          <div class="col-lg-2 nav-img-div">
+            <img class="nav-img" src="media/Rectangle 2222.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- #1 -->
+  <!-- title carousel -->
+  <section id="title">
+    <div class="container-fluid gif-container">
+      <div class="customer-heading">
+        <h1>Want to know your <span>Customer</span>footprints and insights?</h1>
+      </div>
+      <div class="customer-text">
+        <p>Find out what your customers and potential customers are eyeing.</p>
+        <button class="btn btn-green btn-sm" type="button" name="button">LET'S CATCH UP?</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- #2 -->
+  <!-- statistics section -->
+  <section id="stats">
+    <div class="animation-block">
+      <img src="media\blocks\block1.png" alt="Block Icon" class="icon-block block1">
+      <img src="media\blocks\block2.png" alt="Block Icon" class="icon-block block2">
+      <img src="media\blocks\block3.png" alt="Block Icon" class="icon-block block3">
+      <img src="media\blocks\block4.png" alt="Block Icon" class="icon-block block4">
+      <img src="media\blocks\block5.png" alt="Block Icon" class="icon-block block5">
+    </div>
+    <div class="container-fluid section">
+      <div class="row stats-text">
+        <div class="col-lg-6 stats-h">
+          <h2>Integrating AI, Data, Technology & Marketing</h2>
+        </div>
+        <div class="col-lg-6 stats-p">
+          <p>It's often a challenge for organisations to ensure that all four pieces fit well together because of multiple POCs. But here at Weaddo, you get it all in one place.</p>
+          <p>We've partnered with 50+ global enterprises, from established brands to agile startups, empowering CXOs with strategic transformations and driving exceptional growth</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row" id="stats-row">
+        <div class="col-lg-4 stats-div">
+          <h2><span class="stats-count-up" data-val=9>0</span>x</h2>
+          <p>Growth</p>
+        </div>
+        <div class="col-lg-4 stats-div">
+          <h2><span class="stats-count-up" data-val=100>0</span>%</h2>
+          <p>Efficiency</p>
+        </div>
+        <div class="col-lg-4 stats-div">
+          <h2><span class="stats-count-up" data-val=10>0</span>x</h2>
+          <p>Retention</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- #3 -->
+  <!-- different industries with stackable boxes -->
+  <section id="stackable">
+    <div class="container-fluid section">
+      <div class="row">
+        <div class="col-lg-6 stackable-text">
+          <h2>Want To Transform Your MarTech?</h2>
+          <p>Let's begin.</p>
+          <div class="stackable-buttons">
+            <button class="btn btn-outline-blue btn-stackable" type="button" name="button">Omni Channel</button>
+            <button class="btn btn-outline-blue btn-stackable" type="button" name="button">D2C</button>
+            <button class="btn btn-outline-blue btn-stackable" type="button" name="button">Healthcare</button>
+            <button class="btn btn-outline-blue btn-stackable" type="button" name="button">Education</button>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+            <div class='cards-container'>
+              <div class='cards'>
+                <div class='card c1'>
+                  <img class="stackable-img" src="media\noun-crash-6213456.png" alt="">
+                  <br>
+                  <h3>Is your current MarTech stack restricting your CX potential?​</h3>
+                </div>
+                <div class='card c2'>
+                  <img class="stackable-img" src="media\noun-crash-6213456.png" alt="">
+                  <br>
+                  <h3>Is your current MarTech stack restricting your CX potential?​</h3>
+                </div>
+                <div class='card c3'>
+                  <img class="stackable-img" src="media\noun-crash-6213456.png" alt="">
+                  <br>
+                  <h3>Is your current MarTech stack restricting your CX potential?​</h3>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- #4 -->
+  <!-- human, data & ai -->
+  <section id="data-ai">
+    <div class="container-fluid section">
+      <div class="data-ai-h">
+        <h2>We bring Human, Data <br>& AI together</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-5 data-ai-img">
+          <img class="data-ai-gif" src="media\spinootale gif.gif" alt="">
+        </div>
+        <div class="col-lg-6 col-md-7 data-ai-text">
+          <div class="flex-column">
+            <div class="nav nav-pills mb-3 btn-group-toggle" role="tablist group">
+              <a class="active btn btn-outline-blue data-ai-btn" id="analytics-tab" data-toggle="pill" href="#analyticsContent" role="tab" aria-controls="analyticsContent" aria-selected="true">
+                Analytics
+              </a>
+              <a class="btn btn-outline-blue data-ai-btn" id="collaboration-tab" data-toggle="pill" href="#collaborationContent" role="tab" aria-controls="collaborationContent" aria-selected="false">
+                Collaboration
+              </a>
+              <a class="btn btn-outline-blue data-ai-btn" id="creative-tab" data-toggle="pill" href="#creativeContent" role="tab" aria-controls="creativeContent" aria-selected="false">
+                Creative
+              </a>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane fade active show" id="analyticsContent" role="tabpanel" aria-labelledby="analytics-tab">
+                <!-- <h3>Spinootale</h3> -->
+                <img src="media/spinootale.png" alt="Spinootale">
+                <p>We start by understanding human behavior, prefernces, and needs to gain valuable insights into customer behavior, market trends, and performance metrics. And our AI capabilities enable personalized experiences, predictive
+                  analytics, and automation.</p>
+                <button class="btn btn-green btn-sm" type="button" name="button">LEARN MORE</button>
+              </div>
+              <div class="tab-pane fade" id="collaborationContent" role="tabpanel" aria-labelledby="collaboration-tab">
+                <!-- <h3>Brndaddo</h3> -->
+                <img src="https://brndaddo.com/wp-content/themes/brndaddo/img/logo.png" alt="Brndaddo">
+                <!-- <p>collaboration content</p> -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                <button class="btn btn-green btn-sm" type="button" name="button">LEARN MORE</button>
+              </div>
+              <div class="tab-pane fade" id="creativeContent" role="tabpanel" aria-labelledby="creative-tab">
+                <!-- <h3>Weaddo</h3> -->
+                <img src="media/logo.png" alt="WeAddo">
+                <!-- <p>creative content</p> -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                <button class="btn btn-green btn-sm" type="button" name="button">LEARN MORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- #5 -->
+  <!-- martech partners -->
+  <section id="partners">
+    <div class="container-fluid section">
+      <h2>Martech Partners</h2>
+      <p>They say we are the best at what we do and how we do it.</p>
+      <div class="partner-logos">
+        <div class="row m-5 gx-7">
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\google.png" alt="Google">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\mailchimp.png" alt="Mailchimp">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\adobe.png" alt="Adobe">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\shopify.png" alt="Shopify">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\netcore.png" alt="Netcore">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\meta.png" alt="Meta">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\optimizely.png" alt="Optimizely">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\unicommerce.png" alt="unicommerce">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\amazon.png" alt="Amazon">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\microsoft.png" alt="Microsoft">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\aisensy.png" alt="AiSensy">
+          </div>
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="media\partners\zoho.png" alt="Zoho">
+          </div>
+        </div>
+      </div>
+      <div class="partners-carousel">
+        <div class="partner">
+          <img src="media\partners\google.png" alt="Google">
+        </div>
+        <div class="partner">
+          <img src="media\partners\mailchimp.png" alt="Mailchimp">
+        </div>
+        <div class="partner">
+          <img src="media\partners\adobe.png" alt="Adobe">
+        </div>
+        <div class="partner">
+          <img src="media\partners\shopify.png" alt="Shopify">
+        </div>
+        <div class="partner">
+          <img src="media\partners\netcore.png" alt="Netcore">
+        </div>
+        <div class="partner">
+          <img src="media\partners\meta.png" alt="Meta">
+        </div>
+        <div class="partner">
+          <img src="media\partners\optimizely.png" alt="Optimizely">
+        </div>
+        <div class="partner">
+          <img src="media\partners\unicommerce.png" alt="unicommerce">
+        </div>
+        <div class="partner">
+          <img src="media\partners\amazon.png" alt="Amazon">
+        </div>
+        <div class="partner">
+          <img src="media\partners\microsoft.png" alt="Microsoft">
+        </div>
+        <div class="partner">
+          <img src="media\partners\aisensy.png" alt="AiSensy">
+        </div>
+        <div class="partner">
+          <img src="media\partners\zoho.png" alt="Zoho">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- #6 -->
+  <!-- martech challenges -->
+  <section id="challenges">
+    <div class="container-fluid section">
+      <div class="challenges-h">
+        <h2>Solved 40+ Global MarTech Mismatch Challenges</h2>
+      </div>
+
+      <div class="challenges-carousel">
+
+        <div class="challengesSlides challenges-fade">
+          <div class="numbertext"><span>01/</span>03 </div>
+          <div class="img"> <img src="media\Rectangle 528.png" style="width:100%">
+            <div class="challenges-text"><button class="btn btn-challenges" type="button" name="button">
+                <h2>Business Transformation & <br>Growth Delivered</h2>
+                <p>End to <a href="#" style="color:#fff">End Automation</a> with 2x Returns <br>A leading Ceramic Brand - India</p>
+              </button></div>
+          </div>
+
+        </div>
+
+        <div class="challengesSlides challenges-fade">
+          <div class="numbertext"><span>02/</span>03 </div>
+          <div class="img"> <img src="media\Rectangle 528.png" style="width:100%">
+            <div class="challenges-text"><button class="btn btn-challenges" type="button" name="button">
+                <h2>Business Transformation & <br>Growth Delivered</h2>
+                <p>End to End Automation with 2x Returns <br>A leading Ceramic Brand - India</p>
+              </button></div>
+          </div>
+        </div>
+
+        <div class="challengesSlides challenges-fade">
+          <div class="numbertext"><span>03/</span>03 </div>
+          <div class="img"> <img src="media\Rectangle 528.png" style="width:100%">
+            <div class="challenges-text"><button class="btn btn-challenges" type="button" name="button">
+                <h2>Business Transformation & <br>Growth Delivered</h2>
+                <p>End to End Automation with 2x Returns <br>A leading Ceramic Brand - India</p>
+              </button></div>
+          </div>
+
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+      </div>
+      <button class="btn btn-green btn-sm" type="button" name="button">SHOW ME SUCCESS</button>
+    </div>
+  </section>
+
+  <!-- #7 -->
+  <!-- insights & opinions -->
+  <section id="insights-opinions">
+    <div id="insights-opinions" class="container-fluid section">
+      <div class="row">
+        <div class="insights-h col-md-10">
+          <h2>Global Martch Insights <br>& Opinions</h2>
+        </div>
+        <div class="col-md-2 insights-btn">
+          <button class="btn btn-green btn-sm" type="button" name="button">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="insights-carousel slick-carousel">
+            <div class="insight">
+              <img class="insight-img" src="media\Rectangle 152.png" alt="">
+              <div class="col-md-11">
+                <b>Unlocking the Power of Martech Integration for Business Growth</b><br>
+                <a href="#">By Mario</a>
+              </div>
+            </div>
+            <div class="insight">
+              <img class="insight-img" src="media\Rectangle 152.png" alt="">
+              <div class="col-md-11">
+                <b>Unlocking the Power of Martech Integration for Business Growth</b> <br>
+                <a href="#">By Mario</a>
+              </div>
+            </div>
+            <div class="insight">
+              <img class="insight-img" src="media\Rectangle 152.png" alt="">
+              <div class="col-md-11">
+                <b>Unlocking the Power of Martech Integration for Business Growth</b><br>
+                <a href="#">By Mario</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 row insight-articles">
+          <div class="col-6 insight-article">
+            <img src="media\Rectangle 156.png" alt="">
+            <p>Vestibulum non ipsum tincidunt</p>
+            <a href="#">By Mario</a>
+          </div>
+          <div class="col-6 insight-article">
+            <img src="media\Rectangle 157.png" alt="">
+            <p>Measuring Martch ROI- Key success of Retail/Ecom/D2C</p>
+            <a href="#">By Mario</a>
+          </div>
+          <div class="col-6 insight-article">
+            <img src="media\Rectangle 158.png" alt="">
+            <p>Leap in the change of Google algorithms 2024</p>
+            <a href="#">By Mario</a>
+          </div>
+          <div class="col-6 insight-article">
+            <img src="media\Rectangle 159.png" alt="">
+            <p>Proin quis arcu nec tortor</p>
+            <a href="#">By Mario</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- #8 -->
+  <!-- join the movement -->
+  <section id="join">
+    <div class="container-fluid section">
+      <div class="row movement-img">
+        <!-- <div class="movement-img"> -->
+          <div class="col-md-6 movement-h">
+            <h2>Join the Movement</h2>
+          </div>
+          <div class="col-md-6 movement-btn">
+            <button class="btn btn-green btn-sm" type="button" name="button">LET'S BEGIN</button>
+          </div>
+        <!-- </div> -->
+      </div>
+      <div class="movement-text">
+        <p>Reach out to us. Together, we'll chart a course through the digital landscape that's as unique as your business.<br>Your CX transformation stars with WeAddo.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- #last -->
+  <!-- footer -->
+  <hr>
+  <footer class="container">
+    <div class="row">
+      <div class="col-lg-6 footer-text">
+        <h2>We Speak your language & would love to hear from you</h2>
+        <div class="socials">
+          <button class="btn btn-outline-dark social-btn" href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></button>
+          <button class="btn btn-outline-dark social-btn" type="button" name="button"><i class="fa-brands fa-instagram"></i></button>
+          <button class="btn btn-outline-dark social-btn" type="button" name="button"><i class="fa-brands fa-linkedin-in"></i></button>
+          <button class="btn btn-outline-dark social-btn" type="button" name="button"><i class="fa-brands fa-youtube"></i></button>
+        </div>
+      </div>
+      <div class="col-lg-1">
+
+      </div>
+      <div class="col-lg-5">
+        <div class="footer-comment row">
+          <div class="footer-comment-dot"><p> </p> </div>
+          <div class="footer-comment-text">
+            <p>Hey!<br />Please fill out following quick questions so our team can get in touch with you.</p>
+          </div>
+        </div>
+
+        <div class="footer-form">
+          <form id="regForm" action="thankyou.html">
+          <div class="tab">
+            <p>
+              <input id="f-fname" placeholder="First name" oninput="this.className = ''" name="fname " onkeypress="return nameValidater(event)">
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </p>
+            <span class="invalid-text">Please enter a valid Name</span>
+          </div>
+          <div class="tab">
+            <p>
+              <input id="f-lname" placeholder="Last name" oninput="this.className = ''" name="lname" onkeypress="return nameValidater(event)">
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </p>
+            <span class="invalid-text">Please enter a valid Name</span>
+          </div>
+          <div class="tab">
+            <p>
+              <input id="f-email" placeholder="E-mail" oninput="this.className = ''" name="email">
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </p>
+            <span class="invalid-text">Please enter a valid Email ID</span>
+          </div>
+          <div class="tab">
+            <p>
+              <input id="f-phone" placeholder="Phone" oninput="this.className = ''" name="phone" type="text" maxlength="10" onkeypress="return onlyNumberKey(event)" >
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </p>
+            <span class="invalid-text">Please enter a valid Phone Number</span>
+          </div>
+
+          <!-- Circles which indicate the steps of the form: -->
+          <div class="steps">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>
+
+        </div>
+      </div>
+    </div>
+    <div class="copyright-div">
+      <p class="copyright"> <i class="fa-regular fa-copyright" aria-hidden="true"></i> Copyright 2024 | WeAddo</p>
+    </div>
+  </footer>
+
+
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- scroll trigger -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- slick carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+
+
+</script>
+  <!-- custom js -->
+  <script src="index.js" type="text/javascript"> </script>
+
+
+
+</body>
+
+</html>

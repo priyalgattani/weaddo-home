@@ -1,0 +1,1773 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2e228a;
+  font-weight: 800;
+}
+
+a {
+  color: #656565;
+  text-decoration: underline;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.btn-green {
+  background-color: #80ffd7;
+  font-weight: bold;
+  border-radius: 50%;
+  padding-left: 2.25rem;
+  color: black;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  margin: 20px 20px 20px 0;
+}
+
+.btn-green:hover {
+  transform: scale(1.1);
+}
+
+.btn-outline-blue {
+  border-radius: 20px;
+  border: 1px solid #2e228a;
+  background-color: #fff;
+  color: #151945;
+}
+
+.active.btn-outline-blue {
+  background-color: #2e228a;
+  color: #fff;
+}
+
+.btn-outline-blue:hover {
+  background-color: #2e228a;
+  color: #fff;
+}
+
+.section {
+  padding: 4vh 7vw;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.slick-carousel .slick-dots li {
+  width: 5px;
+  margin: 3px;
+  height: 5px;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+}
+
+/*navigation bar */
+nav {
+  background-color: rgba(256, 256, 256, 0.5);
+  backdrop-filter: blur(20px);
+  margin: 1rem 3rem;
+  border-radius: 30px;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+  text-align: right;
+}
+
+.logo {
+  height: 3rem;
+}
+
+.search-input {
+  border: none;
+  border-bottom: 1px solid #363258;
+  border-radius: 0;
+  background: 10%;
+  color: #363258;
+}
+
+.search-input:focus-visible {
+  outline: none;
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 25px;
+}
+
+.nav-btn:hover {
+  background-color: #000029;
+}
+
+.btn-connect {
+  background-color: #16113d;
+  font-family: serif;
+}
+
+.btn-connect:hover {
+  transform: scale(1.1);
+}
+
+.btn-menu {
+  color: #16113d;
+}
+
+/* coffee form */
+#coffeeModal .modal-dialog {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+#coffeeModal .modal-content {
+  height: auto;
+  min-height: 100vh;
+  border-radius: 0;
+  padding: 0 4rem 2rem;
+  border: none;
+  background: url("media/client_bg.png"), linear-gradient(#f6eefe, #f7f2ff, #f9f7ff, #fcfbff, #ffffff);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+#coffeeModal .modal-header {
+  border-bottom: none;
+}
+
+#coffeeModal .logo {
+  height: 5rem;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #bbbbbc;
+  border-radius: 0;
+  width: 100%;
+  background: 10%;
+  color: #000;
+  padding-bottom: 1.5rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-control::placeholder {
+  color: #040404;
+}
+
+.form-control:focus {
+  box-shadow: unset;
+  border-color: unset;
+  background-color: transparent;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: auto;
+  color: #040404;
+}
+
+.modal-footer {
+  position: relative;
+}
+
+.coffee-form-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* menu modal */
+#navModal .modal-dialog {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+#navModal .modal-content {
+  height: auto;
+  border-radius: 0;
+  padding: 0 3rem;
+  border: none;
+  background-color: #2e228a;
+}
+
+#navModal .modal-header {
+  border-bottom: none;
+}
+
+#navModal .modal-body {
+  padding-bottom: 4rem;
+}
+
+#navModal h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#navModal h3::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-list {
+  list-style-type: "";
+  padding-inline-start: 0;
+}
+
+a.nav-link {
+  padding: 0.5rem 0;
+  color: #f6f6f6;
+  text-decoration: none;
+}
+
+.nav-img-div {
+  align-content: center;
+}
+
+.nav-img {
+  max-width: 25vw;
+  position: absolute;
+  right: -85px;
+  bottom: 30px;
+}
+
+/* home carousel */
+.gif-container {
+  height: 100vh;
+  width: 100%;
+  padding: 7vw;
+  align-content: center;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 90% 0%, #faf3f4 45vh, #faf6fd 95vh, white 100vh);
+}
+
+.customer-heading {
+  width: 100vw;
+  font-weight: bolder;
+  color: black;
+}
+
+.customer-heading span {
+  font-size: 9rem;
+  display: block;
+  position: relative;
+  color: black;
+}
+
+.customer-heading span::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  mix-blend-mode: lighten;
+  top: 0;
+  height: 150px;
+  width: 100%;
+  background: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
+}
+
+.btn-connect-mobile {
+  display: none;
+}
+
+/* #2 */
+/* stats section */
+#stats {
+  padding-top: 3%;
+  position: relative;
+}
+
+.animation-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  overflow-x: hidden;
+}
+
+.icon-block {
+  position: absolute;
+  width: 50px;
+  right: 0px;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.block1 {
+  animation-name: blockfloat1;
+}
+
+.block2 {
+  animation-name: blockfloat2;
+}
+
+.block3 {
+  animation-name: blockfloat3;
+}
+
+.block4 {
+  animation-name: blockfloat4;
+}
+
+.block5 {
+  animation-name: blockfloat5;
+}
+
+@keyframes blockfloat1 {
+  0% {
+    top: 50%;
+    left: 0%;
+  }
+
+  50% {
+    top: 70%;
+    left: 70%;
+  }
+
+  100% {
+    bottom: 15%;
+    left: 100%;
+  }
+}
+
+@keyframes blockfloat2 {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    top: 0%;
+    left: 100%;
+  }
+}
+
+@keyframes blockfloat3 {
+  0% {
+    bottom: 40%;
+    right: 0%;
+  }
+
+  50% {
+    bottom: 6%;
+    right: 30%;
+  }
+
+  100% {
+    bottom: 23%;
+    right: 100%;
+  }
+}
+
+@keyframes blockfloat4 {
+  0% {
+    top: 0%;
+    right: 0%;
+  }
+
+  50% {
+    top: 30%;
+    right: 60%;
+  }
+
+  100% {
+    top: 0%;
+    right: 100%;
+  }
+}
+
+@keyframes blockfloat5 {
+  0% {
+    bottom: 0%;
+    left: 0%;
+  }
+
+  50% {
+    bottom: 30%;
+    left: 60%;
+  }
+
+  100% {
+    bottom: 70%;
+    left: 0%;
+  }
+}
+
+.stats-text {
+  margin-bottom: 7%;
+}
+
+#stats-row {
+  align-items: baseline;
+}
+
+.stats-h, .stats-p {
+  padding-right: 6rem;
+}
+
+.stats-div {
+  border-top: 1px solid grey;
+  max-width: 30.333333%;
+  margin: 1.5%;
+  text-align: center;
+  color: #2e228a
+}
+
+.stats-div h2 {
+  text-shadow: 1px 1px 0px #fff,
+    2px 2px 0px #000;
+  font-size: 5rem;
+}
+
+/* #3 */
+/* stackable divs section */
+#stackable .section {
+  height: 1700px;
+  align-content: flex-start;
+  position: relative;
+}
+
+#stackable .row {
+  height: 1550px;
+}
+
+.stackable-text {
+  position: sticky;
+  top: 20vh;
+  height: fit-content;
+}
+
+.stackable-buttons {
+  padding-top: 3rem;
+}
+
+.btn-stackable {
+  margin: 0 5px;
+  min-width: 6rem;
+}
+
+.cards-container {
+  display: flex;
+}
+
+.pin-spacer {
+  inset: unset;
+}
+
+.card {
+  height: 350px;
+  padding: 3rem;
+  width: 500px;
+  margin-bottom: 50px;
+  background: white;
+  justify-content: center;
+
+  &:first-child {
+    box-shadow: 5px 5px 30px 10px rgba(246, 245, 255, 0.5);
+  }
+}
+
+.c1 {
+  background-color: #f2f6ff;
+  /* left: 10px; */
+}
+
+.c2 {
+  background-color: #fef6ec;
+  left: 15px;
+}
+
+.c3 {
+  background-color: #f0deff;
+  left: 30px;
+}
+
+.stackable-img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.card h3 {
+  color: black;
+}
+
+/* #4 */
+/* human, data & ai */
+.data-ai-h {
+  text-align: center;
+}
+
+.data-ai-img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.data-ai-gif {
+  width: 90%;
+  align-self: center;
+}
+
+.data-ai-text {
+  padding: 3rem 0;
+}
+
+.data-ai-btn {
+  margin: 0.5rem;
+  min-width: 8rem;
+}
+
+.tab-content img {
+  padding: 1rem 0;
+}
+
+/* #5 */
+/* martech Partners */
+#partners .section {
+  text-align: center;
+  height: auto;
+  padding-bottom: 5rem;
+}
+
+.partner-logos {
+  display: block;
+}
+
+.partners-carousel {
+  display: none;
+}
+
+.partner-logos img {
+  width: 90%;
+  margin: 1rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+/* #6 */
+/* MarTech challenges */
+#challenges .section {
+  height: auto;
+  padding-bottom: 3rem;
+}
+
+.challenges-h {
+  padding: 0 37% 1rem 0;
+}
+
+.mySlides {
+  display: none;
+}
+
+.challenges-carousel {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.challengesSlides .img {
+  width: 80%;
+}
+
+.btn-challenges {
+  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
+  background-color: rgba(248, 148, 26, 0.7);
+  border: 0;
+  color: white;
+  white-space: nowrap;
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+}
+
+.btn-challenges h2 {
+  color: inherit;
+}
+
+a.prev:not([href]):not([tabindex]), a.next:not([href]):not([tabindex]) {
+  cursor: pointer;
+  position: absolute;
+  right: 20%;
+  width: auto;
+  padding: 6px 16px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.6s ease;
+  border-radius: 0;
+  user-select: none;
+  height: 2.5rem;
+}
+
+.next {
+  bottom: 1px;
+}
+
+.prev {
+  bottom: 2.5rem;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.challenges-text {
+  position: absolute;
+  bottom: 18px;
+  left: -18px;
+  width: 100%;
+}
+
+.numbertext {
+  color: #F8941A;
+  padding: 8px 12px;
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+  right: 0;
+}
+
+.numbertext span {
+  color: black;
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+/* Fading animation */
+.challenges-fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px
+  }
+}
+
+/* #7 */
+/* insights & opinions */
+#insights-opinions {
+  height: auto;
+}
+
+.insights-carousel {
+  height: 60%;
+  padding-right: 3rem;
+}
+
+.insights-carousel .slick-dots {
+  bottom: -20px;
+  right: -35px;
+  margin: 0 6rem 0 0;
+  text-align: right;
+}
+
+.insight .col-md-11 {
+  padding: 0;
+}
+
+.insights-h {
+  padding-bottom: 1rem;
+}
+
+.insight-img {
+  width: 100%;
+}
+
+.insights-btn {
+  text-align: right;
+  padding-right: 10%;
+}
+
+.insight-article {
+  padding: 0 3rem 0 0;
+}
+
+.insight-article img {
+  height: 65%;
+  width: 100%;
+}
+
+.insight-article p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* #8 */
+/* join the movement */
+#join .section {
+  text-align: center;
+  align-content: center;
+  height: auto;
+}
+
+.movement-img {
+  background-image: url('media/Group 3310.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-content: center;
+  height: 80vh;
+}
+
+.movement-h {
+  height: 50%;
+justify-content: center;
+align-items: center;
+display: flex;
+padding: 0 5rem 0 11rem;
+}
+
+.movement-btn {
+  height: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0 12rem 0 5rem
+}
+
+
+.movement-text {
+  padding: 3.5rem 25vw 2rem;
+  align-items: baseline;
+  background-image: url('media/Ellipse 192.png');
+  background-position: top -40px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-weight: bold;
+}
+
+/* #last */
+/* footer */
+footer {
+  padding: 3rem 0 0;
+}
+
+.footer-text {
+  padding-right: 2rem;
+}
+
+.footer-comment {
+  position: relative;
+  height: 100px;
+}
+
+.footer-comment-dot {
+  background-color: #16113d;
+  border: 1px solid #16113d;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1.5px;
+  position: absolute;
+  bottom: -15px;
+  height: 15px;
+  width: 15px;
+}
+
+.footer-comment-text {
+  background-color: #16113d;
+  color: white;
+  width: 70%;
+  height: fit-content;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  font-size: 0.8rem;
+  padding: 1rem 1.25rem;
+}
+
+.footer-comment p {
+  padding: 0;
+}
+
+.socials {
+  padding-top: 2rem;
+}
+
+.social-btn {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  border-width: 2px;
+}
+
+#regForm {
+  background-color: #ffffff;
+  padding: 40px 0 40px 80px;
+  width: 100%;
+  min-width: 300px;
+}
+
+#regForm h2 {
+  text-align: center;
+}
+
+#regForm p {
+  width: 100%;
+  border: 1px solid #444;
+  border-radius: 15px;
+  margin-bottom: 0;
+}
+
+#regForm input {
+  margin: 0;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+#regForm button {
+  color: #444;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  float: right
+}
+
+#regForm button:hover {
+  color: #000;
+}
+
+#regForm button:focus {
+  outline: none;
+}
+
+#regForm input:focus-visible {
+  outline: none;
+}
+
+#regForm .steps {
+  margin-top: 20px;
+}
+
+.step {
+  height: 10px;
+  width: 10px;
+  margin: 0 1.5px;
+  background-color: #fff;
+  border: 1px solid #16113d;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.step.active {
+  background-color: #16113d;
+  opacity: 0.65;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #16113d;
+  opacity: 1;
+}
+
+#regForm span.invalid-text {
+  color: red;
+  display: none;
+  border: none;
+  font-size: 0.7rem;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.tab {
+  display: none;
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+.copyright-div {
+  border-top: 1px solid black;
+  margin-top: 1rem;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  padding-top: 0.7rem;
+  text-align: center;
+}
+
+@media (min-width:1500px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.65rem;
+  }
+
+  h4 {
+    font-size: 2.25rem;
+  }
+
+  h5 {
+    font-size: 2rem;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+
+  body, p, a, button, .btn {
+    font-size: 1.25rem;
+  }
+
+  .btn-green {
+    padding-left: 2.75rem;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .section {
+    height: auto;
+    padding: 7vh;
+  }
+
+  .customer-heading span {
+    font-size: 13rem;
+  }
+
+  .footer-comment-text {
+    top: -35px;
+    left: 35px;
+  }
+
+  .footer-comment-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-height:1024.5px) {
+  .section {
+    height: auto;
+  }
+
+  .movement-img {
+    height: 40vh;
+  }
+
+  .movement-h{
+    padding: 0 5rem 0 6rem;
+  }
+
+  .movement-btn {
+    padding: 0 6rem 0 5rem;
+  }
+}
+
+@media (max-width:991.5px) {
+  .section {
+    padding: 5% 7%;
+    height: auto;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  /* #0 */
+  /* navigation bar */
+  .nav-img {
+    bottom: -50px;
+    right: unset;
+  }
+
+  /* #1 */
+  /* title carousel */
+  .gif-container {
+    background: radial-gradient(circle at 90% 0%, #faf3f4 35vh, #faf6fd 60vh, white 100vh);
+  }
+
+  .customer-heading span {
+    font-size: 8.25rem;
+  }
+
+  /* #2 */
+  /* statistics section */
+  .stats-h, .stats-p {
+    padding: 0;
+  }
+
+  /* #3 */
+  /* different industries with stackable boxes */
+
+  #stackable .row {
+    height: 1160px;
+  }
+  .stackable-text {
+    top: 15vh;
+  }
+
+  /* #4 */
+  /* human, data & ai */
+
+  /* #5 */
+  /* martech partners */
+  /* #6 */
+  /* martech challenges */
+  .challenges-h {
+    padding: 0 30% 1rem 0;
+  }
+
+  .numbertext {
+    font-size: 1.5rem;
+  }
+
+  .numbertext span {
+    font-size: 3rem;
+  }
+
+  .challenges-text {
+    bottom: 0;
+  }
+
+  .btn-challenges {
+    height: 10rem;
+    width: 10rem;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .btn-challenges h2 {
+    font-size: 2rem;
+  }
+
+  /* #7 */
+  /* insights & opinions */
+  .insights-carousel {
+    padding-right: unset;
+  }
+
+  .insights-carousel .slick-dots {
+    bottom: -190px;
+    right: -85px;
+  }
+
+  .insight-article {
+    padding: 0 15px 15px;
+  }
+
+  /* #8 */
+  /* join the movement */
+  .movement-img {
+    height: 40vh;
+  }
+
+  .movement-h {
+    padding: 0 4rem;
+  }
+
+  .movement-btn {
+    padding: 0 4rem;
+  }
+
+  .movement-text {
+    background-position: top -20px center;
+    padding: 2rem 13vw;
+  }
+
+  /* #Last */
+  /* footer */
+  footer {
+    padding: 0;
+  }
+
+  .footer-comment-dot {
+    bottom: -30px;
+    left: 15px;
+  }
+
+  .footer-comment-text {
+    bottom: -15px;
+    left: 30px;
+  }
+
+  #regForm {
+    padding-left: 30vw;
+  }
+
+  #regForm .steps {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width:767.5px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  body {
+    text-align: center;
+  }
+
+  p, a, button .btn, br {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  .btn-green {
+    font-size: 0.8rem;
+    padding-left: 1.75rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /* #0 */
+  /* navigation bar */
+  nav {
+    margin: 0.5rem 0rem;
+  }
+
+  .logo {
+    height: 2.5rem;
+  }
+
+  .search-input {
+    width: 110px;
+  }
+
+  #coffeeModal .modal-content {
+    padding: 0;
+  }
+
+  #coffeeModal .logo {
+    height: 4rem;
+  }
+
+  .form-control {
+    padding-bottom: unset;
+  }
+
+  textarea.form-control {
+    margin-left: 3%;
+  }
+
+  #navModal .modal-content {
+    height: 100vh;
+  }
+
+  /* #1 */
+  /* title carousel */
+  .customer-heading span {
+    font-size: 6.25rem;
+  }
+
+  /* #2 */
+  /* statistics section */
+  .stats-div h2 {
+    font-size: 3.5rem;
+  }
+
+  /* #3 */
+  /* different industries with stackable boxes */
+  #stackable .row {
+    height: 1150px;
+  }
+
+  .btn-stackable {
+    margin: 5px;
+    width: 45%
+  }
+
+  .card {
+    height: 300px;
+    padding: 2.5rem;
+    width: 500px;
+  }
+
+  /* #4 */
+  /* human, data & ai */
+  .data-ai-gif {
+    width: 60%
+  }
+
+  .data-ai-text {
+    padding: 0;
+  }
+
+  #data-ai .nav {
+    display: block;
+  }
+
+  .tab-pane {
+    padding: 0 3%;
+  }
+
+  /* #5 */
+  /* martech partners */
+  #partners .section {
+    padding-bottom: unset;
+  }
+
+  /* #6 */
+  /* martech challenges */
+  #challenges .section {
+    padding-bottom: unset;
+    text-align: left;
+  }
+
+  .challenges-h {
+    padding: 0;
+  }
+
+  .challenges-text {
+    position: absolute;
+    left: -18px;
+    width: unset;
+  }
+
+  .btn-challenges h2 {
+    font-size: 1.5rem;
+  }
+
+  .numbertext {
+    font-size: 1rem;
+  }
+
+  .numbertext span {
+    font-size: 2rem;
+  }
+
+  a.prev:not([href]):not([tabindex]), a.next:not([href]):not([tabindex]) {
+    height: auto;
+    padding: 4px 13px;
+    font-size: 10px;
+  }
+
+  .prev {
+    bottom: 1.5rem;
+  }
+
+  /* #7 */
+  /* insights & opinions */
+  /* #8 */
+  /* join the movement */
+
+  /* #Last */
+  /* footer */
+}
+
+@media (max-width:575.5px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2%;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.85rem;
+  }
+
+  h6 {
+    font-size: 0.7rem;
+  }
+
+  p, a, .btn, body, input, br {
+    font-size: 15px;
+    line-height: 25px
+  }
+
+  p {
+    padding: 2%;
+  }
+
+  .section {
+    padding: 7% 3%;
+  }
+
+  .btn-green {
+    font-size: 0.7rem;
+    padding-left: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  /* #0 */
+  /* navigation bar */
+  .logo {
+    height: 2rem;
+  }
+
+  .search-input {
+    display: none;
+  }
+
+  .btn-connect-laptop {
+    display: none;
+  }
+
+  .btn-connect-mobile {
+    display: block;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 99999;
+  }
+
+  .btn-menu {
+    font-size: 1.5rem;
+  }
+
+  #navModal {
+    z-index: 99999;
+  }
+
+  #navModal .modal-header {
+    padding-bottom: 0;
+  }
+
+  #navModal .modal-body {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #navModal .modal-content {
+    padding: 0;
+    text-align: left;
+  }
+
+  #navModal h3 {
+    margin: 0.75rem 0;
+  }
+
+  #navModal ul {
+    margin-bottom: 0.5rem;
+  }
+
+  #coffeeModal {
+    z-index: 99999;
+  }
+
+  #coffeeModal .logo {
+    height: 2.5rem;
+  }
+
+  #coffeeForm .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .coffee-form-btn {
+    margin: 0;
+  }
+
+  a.nav-link {
+    padding: 0.25rem 0;
+  }
+
+  .nav-img {
+    display: none;
+  }
+
+  /* #1 */
+  /* title carousel */
+  .gif-container {
+    height: 80vh;
+  }
+
+  .customer-heading span {
+    font-size: 4rem;
+  }
+
+  .customer-text p {
+    padding: 0;
+  }
+
+  /* #2 */
+  /* statistics section */
+  .stats-div {
+    padding: 0;
+  }
+  .stats-div h2 {
+    font-size: 2.25rem;
+  }
+
+  /* #3 */
+  /* different industries with stackable boxes */
+  #stackable .section {
+    height: 1150px;
+  }
+
+  .stackable-buttons {
+    padding-top: 0;
+  }
+
+  #stackable .row {
+    height: 920px;
+  }
+
+  .stackable-text {
+    position: sticky;
+    /* top: 80px; */
+    top: 10vh;
+    height: fit-content;
+  }
+
+  .card {
+    height: 200px;
+    padding: 2rem;
+    width: 300px;
+  }
+
+  /* #4 */
+  /* human, data & ai */
+  .data-ai-h {
+    padding-top: 2rem;
+  }
+  /* #5 */
+  /* martech partners */
+  .partner-logos {
+    display: none;
+  }
+
+  .partners-carousel {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  .partner img {
+    display: inline;
+    height: 3.5rem;
+  }
+
+  .slick-prev, .slick-next {
+    cursor: pointer;
+    position: absolute;
+    /* right: 20%; */
+    width: auto;
+    padding: 4px 10px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 0;
+    user-select: none;
+    height: 1.5rem;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-prev::before {
+    content: "❮";
+    font-size: 10px;
+    opacity: 1;
+  }
+
+  .slick-next::before {
+    content: "❯";
+    font-size: 10px;
+    opacity: 1;
+  }
+
+  .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    background: black;
+  }
+
+  /* #6 */
+  /* martech challenges */
+  .numbertext {
+    display: none;
+  }
+
+  .challengesSlides .img {
+    width: 100%;
+  }
+
+  .btn-challenges {
+    height: 7rem;
+    width: 7rem;
+    padding-left: 3rem;
+  }
+
+  .btn-challenges h2 {
+    font-size: 1.25rem;
+  }
+
+  a.prev:not([href]):not([tabindex]), a.next:not([href]):not([tabindex]) {
+    right: 0;
+  }
+
+  /* #7 */
+  /* insights & opinions */
+  .insights-h {
+    padding-bottom: 0;
+  }
+
+  .insights-btn {
+    padding-bottom: 0.5rem;
+  }
+
+  .insights-btn button{
+    margin: 0;
+  }
+
+  .insights-carousel .slick-dots {
+    bottom: -90px;
+    right: -85px;
+  }
+
+  .insight-article img {
+    height: auto;
+  }
+
+  .insight-article p, .insight-article a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  /* #8 */
+  /* join the movement */
+  .movement-img {
+    height: 30vh;
+    width: 100%;
+  }
+
+  .movement-h {
+    padding: 0;
+  }
+
+  .movement-h h2 {
+    position: absolute;
+    top: -25px;
+    padding: 0;
+  }
+
+  .movement-btn {
+    padding: 0;
+  }
+
+  .movement-btn button {
+    position: absolute;
+    bottom: -25px;
+  }
+
+  .movement-text {
+    background-position: top 0px center;
+    padding: 1rem 0;
+  }
+
+  /* #Last */
+  /* footer */
+  .socials {
+    padding: 1rem;
+  }
+
+  .footer-comment {
+    height: auto;
+  }
+
+  .footer-comment-text {
+    width: unset;
+    text-align: left;
+    position: static;
+  }
+
+
+  .footer-comment-dot {
+    display: none;
+  }
+
+  #regForm {
+    padding: 10px 0 0;
+    width: 100%;
+  }
+
+  #regForm input {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  #regForm .steps {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 395px) {
+  p, a, button, body, input, br {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  /* #0 */
+  /* navigation bar */
+
+
+  /* #1 */
+  /* title carousel */
+  /* #2 */
+  /* statistics section */
+  /* #3 */
+  /* different industries with stackable boxes */
+  /* #4 */
+  /* human, data & ai */
+  /* #5 */
+  /* martech partners */
+  /* #6 */
+  /* martech challenges */
+  /* #7 */
+  /* insights & opinions */
+
+  /* #8 */
+  /* join the movement */
+
+  .movement-h h2 {
+    position: absolute;
+    top: -15px;
+    padding: 0;
+  }
+
+  .movement-btn button {
+    position: absolute;
+    bottom: -15px;
+  }
+
+  .movement-text {
+    padding: 2rem 0 0;
+    background: none;
+  }
+
+  /* #Last */
+  /* footer */
+}
+
+
+/* thank you page */
+.thank-you {
+  text-align: center;
+}
+
+.thankyou-logo {
+  height: 2.5rem;
+}

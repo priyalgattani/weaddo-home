@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You | WeAddo</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/2638380501.js" crossorigin="anonymous"></script>
+
+  <!-- slick carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+  <!-- external css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- #0 -->
+  <!-- navigation bar -->
+
+  <header class="container">
+    <nav class="navbar navbar-light fixed-top">
+      <div class="nav-left">
+        <a class="navbar-brand" href=""><img class="logo" src="media/logo.png" alt=""></a>
+      </div>
+      <div class="nav-right">
+        <input placeholder="Your Industry..." type="search" name="search" id="search" class="search-input">
+        <button class="btn btn-dark btn-sm nav-btn btn-connect" data-toggle="modal" data-target="#coffeeModal" type="button" name="button"><i>Coffee? We'll pay!</i></button>
+        <button class="btn btn-outline-dark btn-lg nav-btn btn-menu" data-toggle="modal" data-target="#navModal" type="button" name="button" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <div class="modal fade modal-fullscreen" id="coffeeModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="row">
+          <div class="modal-heading col-lg-5">
+            <h1 class="modal-title" id="coffeeModalLabel">Embark on a Journey of Innovation with </h1> <img src="media/logo.png" alt="">
+          </div>
+          <div class="modal-body col-lg-7">
+            <form id="coffeeForm">
+              <div class="form-inputs row">
+                <div class="form-group col-6">
+                  <input type="text" class="form-control" id="n-fname" aria-describedby="fname" placeholder="First Name*">
+                  <span id="fname-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-6">
+                  <input type="text" class="form-control" id="n-lname" aria-describedby="lname" placeholder="Last Name*">
+                  <span id="lname-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-6">
+                  <input type="email" class="form-control" id="n-email1" aria-describedby="emailHelp" placeholder="Work Email*">
+                  <span id="email-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-6">
+                  <input type="text" class="form-control" id="n-job" placeholder="Job Title*">
+                  <span id="job-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-6">
+                  <input type="text" class="form-control" id="n-company" placeholder="Company*">
+                  <span id="company-error" class="error-message"></span>
+                </div>
+                <div class="form-group col-6">
+                  <select name="loaction" id="n-location" class="form-control">
+                    <option class="form-option" value="">Location*</option>
+                    <option class="form-option" value="ncr">Delhi NCR</option>
+                    <option class="form-option" value="mumbai">Mumbai</option>
+                    <option class="form-option" value="bangalore">Bangalore</option>
+                    <option class="form-option" value="rajasthan">Rajasthan</option>
+                    <option class="form-option" value="haryana">Haryana</option>
+                    <option class="form-option" value="other">Others</option>
+                  </select>
+                  <span id="location-error" class="error-message"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="n-message" placeholder="Message" cols="50" rows="3"></textarea>
+              </div>
+
+              <div class="modal-footer border-top-0">
+                <button type="submit" class="btn btn-green coffee-form-btn">START YOUR JOURNEY</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="navModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark" style="color: white"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container row">
+            <div class="col-lg-10 row">
+              <div class="col-md-3">
+                <h3>About</h3>
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="#">Who we are?</a> </li>
+                  <li><a class="nav-link" href="#">Leadership Team</a> </li>
+                  <li><a class="nav-link" href="#">Work with us</a> </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h3>Solutions</h3>
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="#">CX Transformation</a> </li>
+                  <li><a class="nav-link" href="#">Demand & Engagement</a> </li>
+                  <li><a class="nav-link" href="#">AI & Analytics</a> </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h3>Industries</h3>
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="#">Omni Channel Retail</a> </li>
+                  <li><a class="nav-link" href="#">D2C Ecommerce</a> </li>
+                  <li><a class="nav-link" href="#">Healthcare</a> </li>
+                  <li><a class="nav-link" href="#">Education</a> </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h3>Community</h3>
+                <h3>Case Study</h3>
+                <h3>Insights</h3>
+                <h3>Career</h3>
+              </div>
+            </div>
+            <div class="col-lg-2 nav-img-div">
+              <img class="nav-img" src="media/Rectangle 2222.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- #1 -->
+  <!-- thank you -->
+  <section id="title">
+    <div class="container-fluid section">
+      <div class="thank-you">
+        <h1>Thank You!</h1>
+        <h3>For Being a Part of the &nbsp;<img class="thankyou-logo" src="media/logo.png" alt="WeAddo"> Family.</h3>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- #last -->
+    <!-- footer -->
+    <hr>
+    <footer class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <h1>We Speak your language & would love to hear from you</h1>
+          <div class="socials">
+            <button class="btn btn-outline-dark social-btn" href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></button>
+            <button class="btn btn-outline-dark social-btn" type="button" name="button"><i class="fa-brands fa-instagram"></i></button>
+            <button class="btn btn-outline-dark social-btn" type="button" name="button"><i class="fa-brands fa-linkedin-in"></i></button>
+            <button class="btn btn-outline-dark social-btn" type="button" name="button"><i class="fa-brands fa-youtube"></i></button>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="footer-comment row">
+            <div class="footer-comment-dot"><p> </p> </div>
+            <div class="footer-comment-text">
+              <p>Hey!<br />Please fill out following quick questions so our team can get in touch with you.</p>
+            </div>
+          </div>
+
+          <div class="footer-form">
+            <form id="regForm" action="/action_page.php">
+            <div class="tab">
+              <p>
+                <input id="f-fname" placeholder="First name" oninput="this.className = ''" name="fname">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </p>
+              <p class="invalid-text">Please enter a valid Name</p>
+            </div>
+            <div class="tab">
+              <p>
+                <input id="f-lname" placeholder="Last name" oninput="this.className = ''" name="lname">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </p>
+              <p class="invalid-text">Please enter a valid Name</p>
+            </div>
+            <div class="tab">
+              <p>
+                <input id="f-email" placeholder="E-mail" oninput="this.className = ''" name="email">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </p>
+              <p class="invalid-text">Please enter a valid Email ID</p>
+            </div>
+            <div class="tab">
+              <p>
+                <input id="f-phone" placeholder="Phone" oninput="this.className = ''" name="phone">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </p>
+              <p class="invalid-text">Please enter a valid Phone Number</p>
+            </div>
+
+            <!-- Circles which indicate the steps of the form: -->
+            <div style="margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+          </form>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- slick carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ==" crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- custom js -->
+    <script src="index.js" type="text/javascript"> </script>
+</body>
+
+</html>
